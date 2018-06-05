@@ -1,0 +1,23 @@
+page-help {
+  ion-content {
+    background-color: black !important;
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+  }
+
+  .counter-help {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+  }
+  .counter-help-1 {
+    background-image: url(../assets/help_1.png);
+  }
+  .counter-help-2 {
+    background-image: url(../assets/help_2.png);
+  }
+  .counter-help-3 {
+    background-image: url(../assets/help_3.png);
+  }
+}

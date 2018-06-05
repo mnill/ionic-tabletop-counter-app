@@ -1,0 +1,161 @@
+tableCounter-counter {
+  ion-item-options {
+    background: #222222;
+  }
+  .counter-item {
+    .item {
+      .item-inner {
+        height: 6rem;
+      }
+
+      padding-left: 0;
+      background: black;
+      color: white;
+
+      .label {
+        margin: 0;
+      }
+
+      h2 {
+        padding-left: 10px;
+        background: #222222;
+        margin: 0;
+        font-size: 2rem;
+        line-height:1.5;
+        height: 3rem;
+      }
+
+      ion-label h2:first-child{
+        min-height: 3rem;
+      }
+
+      h1 {
+        margin: 0;
+        padding-left: 15px;
+      }
+
+      .counter-button-counter {
+        margin: 0;
+        border-radius: 0;
+        min-width: 6rem;
+        color: #def7b3;
+        font-size: 3rem;
+        height:100%;
+      }
+
+      .counter-button-counter.minus {
+        background: #7baf1f;
+      }
+
+      .counter-button-counter.plus {
+        background: #8ac02a;
+      }
+
+      .item-inner {
+        padding-right: 0;
+      }
+
+      .counter-value {
+        display: inline-block;
+        float: left;
+      }
+
+      .counter-step-block {
+        display: block;
+        width: 100%;
+        .counter-button-step  {
+          padding: 0 8px;
+          vertical-align: baseline;
+          font-size: 2.8rem;
+          min-width: 34px;
+          display: inline;
+          float: right;
+          margin: 0;
+          height: 100%;
+          border-radius: 0;
+          color: #def7b3;
+        }
+        .counter-button-step.minus {
+          background: lightskyblue;
+        }
+        .counter-button-step.plus {
+          background: cornflowerblue;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          min-width: 4rem;
+          float: right;
+          display: inline-block;
+          margin-right: 10px;
+          background: black;
+          text-align: center;
+        }
+      }
+      .counter-step-block::after {
+        content:"";
+        display:block;
+        clear:both;
+      }
+
+      .background-black {
+        background-color: #222222;
+      }
+
+      .background-dark-grey {
+        background-color: brown;
+      }
+
+      .background-grey {
+        background-color: gray;
+      }
+
+      .background-light-grey {
+        color:black;
+        background-color: white;
+      }
+
+      .background-green {
+        color:black;
+        background-color: green;
+      }
+
+      .background-light-green {
+        color:black;
+        background-color: lightgreen;
+      }
+
+      .background-light-yellow {
+        color:black;
+        background-color: yellow;
+      }
+
+      .background-tan {
+        color:black;
+        background-color: tan;
+      }
+
+      .background-light-blue {
+        color:black;
+        background-color: lightblue;
+      }
+
+      .background-blue {
+        background-color: blue;
+      }
+
+      .background-pink {
+        background-color: pink;
+      }
+
+      .background-red {
+        background-color: red;
+      }
+    }
+    .swipe-button {
+      min-width: 64px;
+    }
+  }
+}
+

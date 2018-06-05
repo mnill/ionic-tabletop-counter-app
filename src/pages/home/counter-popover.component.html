@@ -1,0 +1,57 @@
+<ion-list radio-group class="popover-page">
+  <ion-item>
+    <!--<ion-label stacked>Name</ion-label>-->
+    <ion-input #nameInput placeholder="Name" keyboardFix [(ngModel)]="name" type="text"></ion-input>
+  </ion-item>
+  <ion-label class="color-label">Color</ion-label>
+  <ion-row class="row-dots">
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('black')" class="dot-black" [class.selected]="background == 'black'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('dark-grey')" class="dot-dark-grey" [class.selected]="background == 'dark-grey'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('grey')" class="dot-grey" [class.selected]="background == 'grey'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('light-grey')" class="dot-light-grey" [class.selected]="background == 'light-grey'"></button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="row-dots">
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('green')" class="dot-green" [class.selected]="background == 'green'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('light-green')" class="dot-light-green" [class.selected]="background == 'light-green'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('light-yellow')" class="dot-light-yellow" [class.selected]="background == 'light-yellow'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('tan')" class="dot-tan" [class.selected]="background == 'tan'"></button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="row-dots">
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('blue')" class="dot-blue" [class.selected]="background == 'blue'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('light-blue')" class="dot-light-blue" [class.selected]="background == 'light-blue'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('pink')" class="dot-pink" [class.selected]="background == 'pink'"></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button="dot" (click)="changeBackground('red')" class="dot-red" [class.selected]="background == 'red'"></button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="popover-buttons">
+    <ion-col>
+      <button ion-button clear (click)="cancel()">Cancel</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button clear (click)="ok()">OK</button>
+    </ion-col>
+  </ion-row>
+</ion-list>

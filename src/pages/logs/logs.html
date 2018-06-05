@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Logs</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center padding white *ngIf="logs.length === 0">
+    <h5>
+      You have no logs.
+    </h5>
+  </div>
+  <ion-list #scrollMe padding-bottom text-left padding>
+    <a *ngFor="let log of logs">
+      <span>{{log.ts}}</span> -
+      {{log.message}}
+    </a>
+  </ion-list>
+</ion-content>

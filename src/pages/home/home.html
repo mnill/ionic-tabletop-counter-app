@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list padding-bottom #countersList class="counters-list">
+    <tableCounter-counter #slidItem *ngFor="let counter of counters;trackBy: trackByFn" [counter]="counter" (onRemove)="remove(counter, $event)" (onValueChanged)="changeValue(counter.id, $event)"  (onStepChanged)="changeStep(counter.id, $event)" (onChanged)="change($event)">
+    </tableCounter-counter>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab mini (click)="addCounter()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-item-sliding #slidingItem class="counter-item">
+  <ion-item>
+    <!--<div class="counter-left-block">-->
+      <h2 class="counter-name {{'background-' + counter.color}}">{{counter.name}}&nbsp;{{this.lastChangeTimer !== 0 ? (this.lastChange >= 0 ? ('+' + this.lastChange ) : this.lastChange) : ''}}</h2>
+      <div class="counter-step-block">
+        <h1 class="counter-value">{{counter.value}}</h1>
+        <h2>{{counter.step}}</h2>
+        <button ion-button item-end (click)="changeStep(1)" class="counter-button-step plus"><ion-icon name="add"></ion-icon></button>
+        <button ion-button item-end (click)="changeStep(-1)" class="counter-button-step minus"><ion-icon name="remove"></ion-icon></button>
+      </div>
+    <!--</div>-->
+    <!--<div class="counter-right-block">-->
+    <button ion-button item-end (press)="changeValue(-counter.step, true, $event)" (tap)="changeValue(-1, false, $event)" class="counter-button-counter minus"><ion-icon name="remove"></ion-icon></button>
+    <button ion-button item-end (press)="changeValue(counter.step, true, $event)"  (tap)="changeValue(1, false, $event)"class="counter-button-counter plus"><ion-icon name="add"></ion-icon></button>
+    <!--</div>-->
+  </ion-item>
+  <ion-item-options side="right">
+    <button class="swipe-button" ion-button color="primary" (click)="clear(slidingItem)">
+      <ion-icon name="sync"></ion-icon>
+      Clear
+    </button>
+    <button class="swipe-button" ion-button color="secondary" (click)="edit(slidingItem)">
+      <ion-icon name="create"></ion-icon>
+      Edit
+    </button>
+    <button class="swipe-button" ion-button color="danger"  (click)="remove()">
+      <ion-icon name="trash"></ion-icon>
+      Delete
+    </button>
+  </ion-item-options>
+</ion-item-sliding>

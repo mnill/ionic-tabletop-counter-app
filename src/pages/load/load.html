@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Load</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center padding white *ngIf="presets.length === 0">
+    <h5>
+      You have no presets.
+    </h5>
+  </div>
+  <ion-list padding-bottom>
+    <ion-item-sliding *ngFor="let preset of presets;trackBy:preset?.name">
+      <ion-item detail-none (click)="loadPreset(preset.name)">
+        <h2>{{ preset.name }}</h2>
+      </ion-item>
+      <ion-item-options side="right">
+        <button class="swipe-button" ion-button color="danger"  (click)="removePreset(preset.name)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
